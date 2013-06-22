@@ -1,0 +1,17 @@
+Make an html file and include a board with 9 squares
+Give 9 squares id's that correspond with TTT positions
+Make it so player can click a square to make a move
+
+Player
+Color
+Name
+
+Board
+Winner
+Tie
+Maintain state
+
+TicTacToe
+Maintains logic to play the game
+current_player
+cumulative wins and losses

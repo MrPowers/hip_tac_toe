@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Tic Tac Toe</title>
+    <style type="text/css" media="all">
+      #wrapper {
+        width: 960px;
+        height 100%;
+        margin: 0 auto;
+        //border: 2px red solid;
+      }
+      #board_container {
+        //border: 2px blue solid;
+        width: 350px;
+        margin: 0 auto;
+      }
+      .cell {
+        padding: 5px;
+        height: 100px;
+        width: 100px;
+        float: left;
+        border: solid black 2px;
+      }
+      #cell3, #cell6 { clear: both; }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="./board.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        $('.cell').click(function(){
+          if( $(this).is(':empty') ) {
+            $(this).append("X");
+            //after a move, need to check for a winner or a draw
+           //if not, then change current player
+          } else {
+            alert("Spot is taken");
+          };
+        });
+        $('body').dblclick(function(){
+          console.log(Board.calculateGrid());
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="current_player">
+        <h2>Current Player is Bob</h2>
+      </div>
+      <div id="board_container">
+        <div id="cell0" class="cell"></div>
+        <div id="cell1" class="cell"></div>
+        <div id="cell2" class="cell"></div>
+        <div id="cell3" class="cell"></div>
+        <div id="cell4" class="cell"></div>
+        <div id="cell5" class="cell"></div>
+        <div id="cell6" class="cell"></div>
+        <div id="cell7" class="cell"></div>
+        <div id="cell8" class="cell"></div>
+        <p id="something"></p>
+      </div>
+    </div>
+  </body>
+</html>
